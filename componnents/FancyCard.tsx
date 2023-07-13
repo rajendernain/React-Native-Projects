@@ -1,4 +1,4 @@
-import { Image, StyleSheet, Text, View } from 'react-native'
+import { Dimensions, Image, StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 
 export default function FancyCard() {
@@ -28,13 +28,15 @@ const styles = StyleSheet.create({
         fontSize:24,
         fontWeight: 'bold',
         paddingHorizontal: 8,
+        textAlign:'center',
+        marginBottom:15,
     },
     card:{
-        width:350,
+        width:Dimensions.get('window').width-40,
         height:340,
         borderRadius:6,
-        marginVertical:12,
-        marginHorizontal:16,
+        // marginVertical:12,
+        // marginHorizontal:16,
     },
     cardElevated:{
         backgroundColor:'#FFFFFF',
@@ -42,7 +44,10 @@ const styles = StyleSheet.create({
         shadowOffset:{
             width:1,
             height:1,
-        }
+        },
+        marginLeft:20,
+        marginRight:20,
+        marginBottom:15,
     },
     cardImage:{
         height:180,

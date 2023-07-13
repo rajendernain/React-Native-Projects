@@ -1,4 +1,4 @@
-import { Image, ScrollView, StyleSheet, Text, View } from 'react-native'
+import { Dimensions, Image, ScrollView, StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 
 export default function ContactList() {
@@ -56,10 +56,14 @@ const styles = StyleSheet.create({
         fontSize:24,
         fontWeight: 'bold',
         paddingHorizontal: 8,
+        textAlign:'center',
+        paddingBottom:15,
     },
     container:{
-        paddingHorizontal:16,
+        //paddingHorizontal:16,
         marginBottom:4,
+        marginLeft:20,
+        marginRight:20,
     },
     userCard:{
         flex:1,
@@ -69,6 +73,7 @@ const styles = StyleSheet.create({
         backgroundColor:"#8D3DAF",
         padding:8,
         borderRadius:10,
+        width: Dimensions.get('window').width-40,
     },
     userImage:{
         width:60,

@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View, Linking, Image,TouchableOpacity } from 'react-native'
+import { StyleSheet, Text, View, Linking, Image,TouchableOpacity,Dimensions  } from 'react-native'
 import React from 'react'
 
 export default function ActionCaer() {
@@ -46,18 +46,22 @@ const styles = StyleSheet.create({
     fontSize:24,
     fontWeight: 'bold',
     paddingHorizontal: 8,
+    textAlign:'center',
+    paddingBottom:15
   },
   card:{
-    width:350,
+    width: Dimensions.get('window').width-40,
     height:360,
     borderRadius:6,
-    marginVertical:12,
-    marginHorizontal:16,
+    //marginVertical:12,
+   // marginHorizontal:16,
   },
   elevatedCard:{
     backgroundColor:'#E07C24',    
     borderTopLeftRadius:6,
     borderTopRightRadius:6,
+    marginLeft:20,
+    marginRight:20,
     elevation:3,
     shadowOffset:{
       width:1,
@@ -73,9 +77,9 @@ const styles = StyleSheet.create({
     alignItems:'center',
   },
   headerText:{
-    color:'#000',
+    color:'#fff',
     fontSize:16,
-    fontWeight:'600',
+    fontWeight:'800',
   },
   cardImage:{
     height:190,
@@ -87,7 +91,7 @@ const styles = StyleSheet.create({
     padding:8,
     flexDirection:'row',
     alignItems:'center',
-    justifyContent:'space-evenly',
+    justifyContent:'space-between',
   },
   socialLinks:{
     fontSize:16,

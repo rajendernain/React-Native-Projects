@@ -1,4 +1,4 @@
-import { ScrollView, StyleSheet, Text, View } from 'react-native'
+import { Dimensions, ScrollView, StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 
 export default function ElevatedCard() {
@@ -34,6 +34,8 @@ const styles = StyleSheet.create({
         fontSize:24,
         fontWeight: 'bold',
         paddingHorizontal: 8,
+        textAlign:'center',
+        marginBottom:10,
     },
     text:{
         fontSize:16,
@@ -43,7 +45,7 @@ const styles = StyleSheet.create({
         flex:1,
         alignItems:"center",
         justifyContent:"center",
-        width:100,
+        width:Dimensions.get('window').width/5,
         height:100,
         borderRadius:4,
         margin:8,
@@ -62,6 +64,10 @@ const styles = StyleSheet.create({
     container:{
         flex:1,
         flexDirection:"row",
+        width: Dimensions.get('window').width-40,
         padding:8,
+        marginLeft:20,
+        marginRight:20
+
     },
 })
