@@ -1,4 +1,4 @@
-import { Dimensions, Image, StyleSheet, Text, View } from 'react-native'
+import { Dimensions, Image, Linking, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import React from 'react'
 
 export default function FancyCard() {
@@ -15,7 +15,10 @@ export default function FancyCard() {
         <View style={styles.cardBody}>
             <Text style={styles.cardTitle}>Hawa Mahal</Text>
             <Text style={styles.cardLable}>Pink City Jaipur</Text>
-            <Text style={styles.cardDiscription}>The Hawa Mahal is a place in the city of Jaipur, India. Built from red and pink sandstone, it is on the edge of the City Place.</Text>
+            <Text style={styles.cardDiscription}>
+                The Hawa Mahal is a place in the city of Jaipur, India. Built from red and pink sandstone,
+                 it is on the edge of the City Place <Text onPress={()=> Linking.openURL('https://en.wikipedia.org/wiki/Hawa_Mahal')} style={styles.txtColor}>more...</Text>
+            </Text>
             <Text style={styles.cardFooter}>12 mins away</Text>
         </View>
       </View>
@@ -31,6 +34,7 @@ const styles = StyleSheet.create({
         textAlign:'center',
         marginBottom:15,
     },
+    txtColor:{color:'blue'},
     card:{
         width:Dimensions.get('window').width-40,
         height:340,
@@ -38,13 +42,20 @@ const styles = StyleSheet.create({
         // marginVertical:12,
         // marginHorizontal:16,
     },
-    cardElevated:{
-        backgroundColor:'#FFFFFF',
+    cardElevated:{  
+       transform: [
+          { perspective: 7000 },
+          { rotateX: '2deg'},
+          { rotateY: '10deg'},
+          { skewX: '2deg'},
+        ],
+         backgroundColor:'#FFFFFF',
         elevation:3,
         shadowOffset:{
             width:1,
             height:1,
         },
+        shadowColor:"blue",
         marginLeft:20,
         marginRight:20,
         marginBottom:15,
