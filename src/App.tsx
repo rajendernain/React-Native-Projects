@@ -1,10 +1,8 @@
 
 import React, { useState } from 'react';
 import type {PropsWithChildren} from 'react';
-
 import Icons from './components/Icons';
 import { FlatList, Pressable, SafeAreaView, StatusBar, StyleSheet, Text, View } from 'react-native';
-
 import Snackbar from 'react-native-snackbar';
 
 function App(): JSX.Element {
@@ -81,7 +79,6 @@ function App(): JSX.Element {
         textColor: "#FFFFFF"
       })
     }
-
     if(gameState[itemNumber] === 'empty'){
       gameState[itemNumber] = isCross?"cross":"circle"
       setIsCross(!isCross);
